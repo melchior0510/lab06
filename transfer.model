@@ -1,0 +1,8 @@
+From: Valid, Frozen, Missing
+To: Valid, Missing, SameAsFrom
+Amount: Normal, ExactBalance, Zero, OverBalance, OverLimit
+Currency: Same, Different
+
+IF [From] <> "Valid" THEN [To] = "Valid" AND [Amount] = "Normal";
+IF [To] <> "Valid" THEN [Amount] = "Normal";
+IF [Amount] = "ExactBalance" THEN [Currency] = "Same";
